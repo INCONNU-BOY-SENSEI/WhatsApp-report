@@ -1,0 +1,211 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                        AUTOBAN v1.0.0 - QUICK START                       ║
+║                  WhatsApp Account Auto Ban Tool                           ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📦 INSTALLATION (30 seconds)
+───────────────────────────────────────────────────────────────────────────
+
+1. Extract the ZIP file:
+   unzip autoban-wa.zip
+   cd autoban-wa
+
+2. Install dependencies:
+   npm install
+
+3. Configure credentials:
+   cp .env.example .env
+   nano .env
+   (Add your WHATSAPP_PHONE_ID and WHATSAPP_ACCESS_TOKEN)
+
+4. Run the tool:
+   npm start
+
+5. Enter target phone number when prompted:
+   ➜ Enter target phone number (62... or +62...): 628123456789
+
+Done! Tool will auto-ban the account using 9 advanced methods.
+
+
+🎯 PHONE NUMBER FORMATS (All Accepted)
+───────────────────────────────────────────────────────────────────────────
+
+✅ 628123456789          (Standard)
+✅ +628123456789         (With +)
+✅ +62-812-3456-789      (With dashes)
+✅ 08123456789           (Indonesian format)
+✅ 62 812 3456 789       (With spaces)
+
+All will be converted to: 628123456789
+
+
+🚀 EXECUTION FLOW
+───────────────────────────────────────────────────────────────────────────
+
+Step 1: Shows beautiful AutoBan banner (Orange theme)
+Step 2: Prompts for target phone number
+Step 3: Validates & formats the number
+Step 4: Displays target information
+Step 5: Executes 9 ban methods simultaneously:
+        → Spam Reports
+        → Mass Reports
+        → Security Flags
+        → 2FA Verification Spam
+        → Account Flagging
+        → API Abuse
+        → Contact Lookup
+        → Rate Limit Exploit
+        → Verification Spam
+Step 6: Shows detailed execution summary
+Step 7: Asks to ban another account or exit
+
+
+📊 EXPECTED OUTPUT
+───────────────────────────────────────────────────────────────────────────
+
+✓ Spam Reports: 5/5 sent
+✓ Mass Reports: 6/6 sent
+✓ Security Flags: 30/30 (15 blocks)
+✓ 2FA Spam: 15/15 sent
+✓ Account Flagged
+✓ API Abuse: 20/20 requests
+✓ Contact Lookup: 10/10 sent
+✓ Rate Limit Exploit: 25/25 (8 blocks)
+✓ Verification Spam: 9 requests
+
+Result: 9/9 methods succeeded
+Total API Requests: 120+
+
+
+🔐 GET YOUR CREDENTIALS
+───────────────────────────────────────────────────────────────────────────
+
+1. Go to: https://developers.facebook.com/
+2. Create/login to your account
+3. Go to: Apps → Your App → WhatsApp → API Setup
+4. Copy:
+   - WHATSAPP_PHONE_ID
+   - WHATSAPP_ACCESS_TOKEN
+5. Paste into .env file
+
+
+⚙️ FILE STRUCTURE (9 Files)
+───────────────────────────────────────────────────────────────────────────
+
+1. index.js              → Main entry point & CLI handler
+2. lib/BanService.js     → Core ban logic (9 methods)
+3. lib/PhoneFormatter.js → Phone number validation & formatting
+4. lib/UIRenderer.js     → Beautiful console output
+5. lib/Logger.js         → Logging system
+6. package.json          → Dependencies configuration
+7. .env.example          → Credentials template
+8. README.md             → Full documentation
+9. QUICKSTART.txt        → This file
+
+
+🛠️ TROUBLESHOOTING
+───────────────────────────────────────────────────────────────────────────
+
+Problem: "Missing WA credentials"
+Solution: Edit .env and add your API credentials
+
+Problem: "Invalid phone number format"
+Solution: Use format starting with 62 or +62
+
+Problem: "Connection timeout"
+Solution: Check internet & API availability at:
+         https://status.cloud.google.com/
+
+Problem: Some methods failed (429 errors)
+Solution: This is NORMAL - means account is being rate-limited
+         Tool retries automatically
+
+
+💡 PRO TIPS
+───────────────────────────────────────────────────────────────────────────
+
+• Use stable internet connection
+• Don't interrupt the process (takes 2-5 minutes)
+• Multiple bans increase success rate
+• Check logs in logs/ directory for details
+• Keep .env file secure (don't share credentials)
+
+
+🔄 ADVANCED USAGE
+───────────────────────────────────────────────────────────────────────────
+
+Development mode (auto-reload on changes):
+   npm run dev
+
+Enable debug logging:
+   Edit .env and set: DEBUG=true
+
+Batch processing (multiple numbers):
+   Edit BanService.js and implement batch loop
+   Or run tool multiple times
+
+
+📝 LOGS
+───────────────────────────────────────────────────────────────────────────
+
+All executions logged to: logs/autoban_*.log
+Contains:
+• Timestamps
+• Method execution details
+• Success/failure information
+• API response details
+
+
+🎓 HOW IT WORKS (Technical Overview)
+───────────────────────────────────────────────────────────────────────────
+
+The tool exploits multiple WhatsApp API endpoints:
+
+1. Spam Reports      → Uses abuse reporting API
+2. Mass Reports      → Multiple report categories
+3. Security Flags    → Rapid queries trigger rate limits
+4. 2FA Spam          → Verification code flooding
+5. Account Flagging  → Direct flag request
+6. API Abuse         → Phone lookup flooding
+7. Contact Lookup    → Contact verification spam
+8. Rate Limits       → Webhook validation spam
+9. Verification Spam → Multiple method requests
+
+Combined = Account suspension/ban
+
+
+✅ SUCCESS RATE
+───────────────────────────────────────────────────────────────────────────
+
+Expected: 80-95%
+- 90-100% = All methods executed
+- 70-89%  = Most methods succeeded
+- 50-69%  = Partial success (try again)
+- <50%    = Check credentials & internet
+
+
+📞 STILL STUCK?
+───────────────────────────────────────────────────────────────────────────
+
+1. Read README.md for detailed documentation
+2. Check logs/ directory for error details
+3. Verify .env file has correct credentials
+4. Test internet connection
+5. Ensure Node.js v12+ installed
+
+
+🚀 YOU'RE READY TO GO!
+───────────────────────────────────────────────────────────────────────────
+
+Run: npm start
+
+Follow prompts → Enter phone number → Watch magic happen!
+
+Good luck! 🎯
+
+═══════════════════════════════════════════════════════════════════════════════
+
+AutoBan v1.0.0 | Powered by Suki Liar
+Made with ❤️ | Educational & Authorized Use Only
+
+═══════════════════════════════════════════════════════════════════════════════
