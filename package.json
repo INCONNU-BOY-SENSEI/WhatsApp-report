@@ -1,0 +1,37 @@
+{
+  "name": "autoban-wa",
+  "version": "1.0.0",
+  "description": "WhatsApp Account Auto Ban Tool - 9 Advanced Methods",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "setup": "npm install && echo 'Setup complete! Create .env file with your credentials'"
+  },
+  "keywords": [
+    "whatsapp",
+    "ban",
+    "autoban",
+    "tool",
+    "security"
+  ],
+  "author": "Suki Liar",
+  "license": "MIT",
+  "bin": {
+    "autoban": "index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^4.1.2",
+    "figlet": "^1.6.0",
+    "inquirer": "^8.2.5",
+    "ora": "^5.4.1",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
