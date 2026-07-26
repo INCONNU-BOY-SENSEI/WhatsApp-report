@@ -1,6 +1,3 @@
-#!/usr/bin/env node
-#!/usr/bin/env node
-
 require('dotenv').config();
 const chalk = require('chalk');
 const figlet = require('figlet');
