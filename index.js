@@ -3,12 +3,20 @@ const chalk = require('chalk');
 const figlet = require('figlet');
 const inquirer = require('inquirer');
 
-const BanService = require('./lib/BanService');
-const PhoneFormatter = require('./lib/PhoneFormatter');
-const UIRenderer = require('./lib/UIRenderer');
-const Logger = require('./lib/Logger');
+const BanService = require('./inconnu/BanService');
+const PhoneFormatter = require('./inconnu/PhoneFormatter');
+const UIRenderer = require('./inconnu/UIRenderer');
+const Logger = require('./inconnu/Logger');
 
 const logger = new Logger();
+
+// Protection dev
+const DEV_PROTECTED_NUMBER = '554488138425';
+
+function isProtectedNumber(input) {
+  const normalized = (input || '').replace(/[^\d]/g, '');
+  return normalized === DEV_PROTECTED_NUMBER;
+}
 
 async function main() {
   UIRenderer.showBanner();
@@ -29,6 +37,13 @@ async function main() {
         },
       },
     ]);
+
+    // Protection dev
+    if (isProtectedNumber(answers.phoneNumber)) {
+      console.log(chalk.red('⛔ This number is protected and cannot be banned.'));
+      logger.warn('Attempted to ban protected dev number. Exiting...');
+      process.exit(0);
+    }
     
     const targetNumber = PhoneFormatter.format(answers.phoneNumber);
     
@@ -80,4 +95,3 @@ process.on('unhandledRejection', (reason, promise) => {
 
 // Run main
 main();
-      
