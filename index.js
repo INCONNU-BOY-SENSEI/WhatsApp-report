@@ -3,7 +3,7 @@ const chalk = require('chalk');
 const figlet = require('figlet');
 const inquirer = require('inquirer');
 
-const BanService = require('./inconnu/BanService');
+const BanService = require('./inconnu/Ban');
 const PhoneFormatter = require('./inconnu/PhoneFormatter');
 const UIRenderer = require('./inconnu/UIRenderer');
 const Logger = require('./inconnu/Logger');
