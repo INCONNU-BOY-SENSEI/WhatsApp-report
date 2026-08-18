@@ -1,7 +1,7 @@
 const axios = require('axios');
 const ora = require('ora');
 const chalk = require('chalk');
-const Logger = require('./Logger');
+const Logger = require('./inconnuboy');
 
 class BanService {
   constructor() {
