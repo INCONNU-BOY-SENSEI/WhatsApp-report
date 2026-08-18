@@ -19,7 +19,7 @@ async function main() {
       {
         type: 'input',
         name: 'phoneNumber',
-        message: chalk.red('➜ Enter target phone number (62... or +62...):'),
+        message: chalk.red('➜ Enter target phone number (+55... or +62...):'),
         validate: (input) => {
           const formatted = PhoneFormatter.format(input);
           if (formatted && formatted.length >= 10 && formatted.length <= 15) {
