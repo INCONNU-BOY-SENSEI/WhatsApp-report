@@ -6,7 +6,7 @@ const inquirer = require('inquirer');
 const BanService = require('./inconnu/Ban');
 const PhoneFormatter = require('./inconnu/PhoneFormatter');
 const UIRenderer = require('./inconnu/UIRenderer');
-const Logger = require('./inconnu/Logger');
+const Logger = require('./inconnu/inconnuboy');
 
 const logger = new Logger();
 
