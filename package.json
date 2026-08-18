@@ -15,7 +15,7 @@
     "tool",
     "security"
   ],
-  "author": "Suki Liar",
+  "author": "inconnu tech",
   "license": "MIT",
   "bin": {
     "autoban": "index.js"
