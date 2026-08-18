@@ -1,7 +1,5 @@
 
 
-**WhatsApp Account Auto Ban Tool** - Professional grade account suspension system with 9 advanced methods.
-
 ---
 
 ## 🚀 Features
