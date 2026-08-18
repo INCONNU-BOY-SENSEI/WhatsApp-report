@@ -15,7 +15,7 @@ class UIRenderer {
     console.log(chalk.hex('#FF8C00').bold(banner));
     console.log(chalk.hex('#FF8C00')('═'.repeat(70)));
     console.log(chalk.hex('#FF8C00').bold('  WhatsApp Auto Ban Tool | 9 Advanced Methods'));
-    console.log(chalk.hex('#FF8C00')('  Powered by Suki Liar | v1.0.0'));
+    console.log(chalk.hex('#FF8C00')('v1.0.0'));
     console.log(chalk.hex('#FF8C00')('═'.repeat(70)));
     console.log('');
   }
